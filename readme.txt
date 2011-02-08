@@ -28,9 +28,12 @@ Fixes are specific to your version of WordPress. It may be that your version of 
 
 = How do I know which hotfixes are being applied to my version? =
 
-Read the "Hotfix List" section in the description. A later version of the plugin may list the hotfixes in a special WordPress admin page.
+Read the "Complete Hotfix List" section in the description. A later version of the plugin may list the hotfixes in a special WordPress admin page.
 
 == Changelog ==
+
+= 0.3 =
+* Adds a filter, and fixes a PHP warning for people on versions with no hotfixes available.
 
 = 0.2 =
 * Better 3.0.5 comment text KSES fix for the admin. Allows you to see safe HTML in the admin.
@@ -41,6 +44,8 @@ Read the "Hotfix List" section in the description. A later version of the plugin
 * Hotfix for WP 3.0.5 comment text KSES overzealousness.
 
 == Upgrade Notice ==
+= 0.3 =
+If you're not running WordPress 3.0.5 and you're getting a "Line 19" error, this update will fix that.
 
 = 0.2 =
 Allows you to see safe HTML in the admin.
