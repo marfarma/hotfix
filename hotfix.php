@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Hotfix
-Description: Provides "hotfixes" for WordPress bugs, in between WordPress updates. Keep the plugin updated!
+Description: Provides "hotfixes" for annoying WordPress bugs, so you don't have to wait for the next WordPress core release. Keep the plugin updated!
 Version: 0.1
 Author: Mark Jaquith
 Author URI: http://coveredwebservices.com/
