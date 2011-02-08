@@ -11,7 +11,12 @@ Provides "hotfixes" for annoying WordPress bugs, so you don't have to wait for t
 
 This plugin provides "hotfixes" for annoying WordPress bugs, so you don't have to wait for the next WordPress core release. **This does not mean you can stop updating WordPress!** It just means that you'll get fixes faster.
 
-The fixes are specific to your version of WordPress. It may be that your version of WordPress has no fixes. That's fine. Keep the plugin activated and updated, in case you need it for a subsequent version of WordPress.
+Recent fixes:
+
+* **WordPress 3.0.5**
+	* Prevent KSES from overzealously stripping images and other advanced HTML from Administrator/Editor comments on display.
+
+Fixes are specific to your version of WordPress. It may be that your version of WordPress has no fixes. That's fine. Keep the plugin activated and updated, in case you need it for a subsequent version of WordPress!
 
 == Installation ==
 
@@ -23,7 +28,7 @@ The fixes are specific to your version of WordPress. It may be that your version
 
 = How do I know which hotfixes are being applied to my version? =
 
-Read the "Hotfix List" section below. A later version of the plugin will list the hotfixes in a special WordPress admin page.
+Read the "Hotfix List" section in the description. A later version of the plugin may list the hotfixes in a special WordPress admin page.
 
 == Changelog ==
 
@@ -40,10 +45,7 @@ Read the "Hotfix List" section below. A later version of the plugin will list th
 = 0.2 =
 Allows you to see safe HTML in the admin.
 
-== Hotfix List ==
+== Complete Hotfix List ==
 
-The following hotfixes are applied:
-
-**WordPress 3.0.5**
-
-* Prevent WordPress from overzealously stripping images and other advanced HTML from administrator/editor comments on display.
+* **WordPress 3.0.5**
+	* Prevent KSES from overzealously stripping images and other advanced HTML from Administrator/Editor comments on display.
