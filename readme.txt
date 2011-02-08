@@ -1,5 +1,5 @@
 === Hotfix ===
-Contributors: markjaquith
+Contributors: markjaquith, wordpressdotorg
 Tags: hotfix, bugs, wordpress, update
 Requires at least: 3.0
 Tested up to: 3.1
@@ -27,14 +27,18 @@ Read the "Hotfix List" section below. A later version of the plugin will list th
 
 == Changelog ==
 
+= 0.2 =
+* Better 3.0.5 comment text KSES fix for the admin. Allows you to see safe HTML in the admin.
+* Remove the cws_ prefixes. This may become official.
+
 = 0.1 =
 * First version
 * Hotfix for WP 3.0.5 comment text KSES overzealousness.
 
 == Upgrade Notice ==
 
-= 0.1 =
-This is the first version.
+= 0.2 =
+Allows you to see safe HTML in the admin.
 
 == Hotfix List ==
 
