@@ -5,11 +5,11 @@ Requires at least: 3.0
 Tested up to: 3.1
 Stable tag: 0.2
 
-Provides "hotfixes" for annoying WordPress bugs, so you don't have to wait for the next WordPress core release.
+Provides fixes for selected WordPress bugs, so you don't have to wait for the next WordPress core release.
 
 == Description ==
 
-This plugin provides "hotfixes" for annoying WordPress bugs, so you don't have to wait for the next WordPress core release. **This does not mean you can stop updating WordPress!** It just means that you'll get fixes faster.
+This plugin provides fixes for selected WordPress bugs, so you don't have to wait for the next WordPress core release. **This does not mean you can stop updating WordPress!** It just means that you'll get a few selected fixes more quickly.
 
 Recent fixes:
 
