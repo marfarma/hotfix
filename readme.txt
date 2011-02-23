@@ -13,6 +13,9 @@ This plugin provides fixes for selected WordPress bugs, so you don't have to wai
 
 Recent fixes:
 
+* **WordPress 3.1**
+	* Fix a bug that caused some taxonomy query manipulations (like excluding categories) to not work like they did before.
+
 * **WordPress 3.0.5**
 	* Prevent KSES from overzealously stripping images and other advanced HTML from Administrator/Editor comments on display.
 
@@ -32,6 +35,9 @@ Read the "Complete Hotfix List" section in the description. A later version of t
 
 == Changelog ==
 
+= 0.4 =
+* Fix a bug in WP 3.1 that caused some taxonomy query manipulations (like excluding categories) to not work like they did before.
+
 = 0.3 =
 * Adds a filter, and fixes a PHP warning for people on versions with no hotfixes available.
 
@@ -44,6 +50,9 @@ Read the "Complete Hotfix List" section in the description. A later version of t
 * Hotfix for WP 3.0.5 comment text KSES overzealousness.
 
 == Upgrade Notice ==
+= 0.4 =
+Upgrade if you're running WordPress 3.1 to fix a bug with taxonomy query manipulations.
+
 = 0.3 =
 If you're not running WordPress 3.0.5 and you're getting a "Line 19" error, this update will fix that.
 
@@ -51,6 +60,9 @@ If you're not running WordPress 3.0.5 and you're getting a "Line 19" error, this
 Allows you to see safe HTML in the admin.
 
 == Complete Hotfix List ==
+
+* **WordPress 3.1**
+	* Fix a bug that caused some taxonomy query manipulations (like excluding categories) to not work like they did before.
 
 * **WordPress 3.0.5**
 	* Prevent KSES from overzealously stripping images and other advanced HTML from Administrator/Editor comments on display.
