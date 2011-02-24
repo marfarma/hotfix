@@ -1,15 +1,15 @@
 === Hotfix ===
-Contributors: markjaquith, wordpressdotorg
+Contributors: markjaquith
 Tags: hotfix, bugs, wordpress, update
 Requires at least: 3.0
 Tested up to: 3.1
-Stable tag: 0.3
+Stable tag: 0.4
 
-Provides fixes for selected WordPress bugs, so you don't have to wait for the next WordPress core release.
+Provides unofficial fixes for selected WordPress bugs, so you don't have to wait for the next WordPress core release.
 
 == Description ==
 
-This plugin provides fixes for selected WordPress bugs, so you don't have to wait for the next WordPress core release. **This does not mean you can stop updating WordPress!** It just means that you'll get a few selected fixes more quickly.
+This unofficial plugin provides fixes for selected WordPress bugs, so you don't have to wait for the next WordPress core release. **This does not mean you can stop updating WordPress!** It just means that you'll get a few selected fixes more quickly.
 
 Recent fixes:
 
