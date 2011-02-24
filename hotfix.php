@@ -2,7 +2,7 @@
 /*
 Plugin Name: Hotfix
 Description: Provides "hotfixes" for selected WordPress bugs, so you don't have to wait for the next WordPress core release. Keep the plugin updated!
-Version: 0.4-beta
+Version: 0.4
 Author: Mark Jaquith
 Author URI: http://coveredwebservices.com/
 */
@@ -14,7 +14,6 @@ function wp_hotfix_init() {
 
 	switch ( $wp_version ) {
 		case '3.1' :
-		case '3.2-bleeding' : // Just for testing. Remove this before 0.4 is tagged
 			$hotfixes = array( '310_parsed_tax_query' );
 			break;
 		case '3.0.5' :
@@ -44,6 +43,6 @@ function wp_hotfix_310_parsed_tax_query() {
 }
 
 	function wp_hotfix_310_parsed_tax_query_pre_get_posts( $q ) {
-		$q->parsed_tax_query = false; // Force it to be re-parsed.
+		@$q->parsed_tax_query = false; // Force it to be re-parsed.
 		return $q;
 	}
