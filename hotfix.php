@@ -51,7 +51,7 @@ function wp_hotfix_310_parsed_tax_query() {
 
 function wp_hotfix_310_pathinfo_custom_tax_rules() {
 	add_filter( 'rewrite_rules_array', 'wp_hotfix_310_pathinfo_custom_tax_rules_filter' );
-	add_filter( 'term_link', 'wp_hotfix_310_pathinfo_custom_tax_rules_link' );
+	add_filter( 'term_link', 'wp_hotfix_310_pathinfo_custom_tax_rules_replace' );
 	if ( is_admin() && version_compare( '2', get_option( 'hotfix_version' ), '>' ) )
 		add_action( 'admin_head', 'wp_hotfix_310_pathinfo_custom_tax_rules_upgrade' );
 }
@@ -59,13 +59,15 @@ function wp_hotfix_310_pathinfo_custom_tax_rules() {
 	function wp_hotfix_310_pathinfo_custom_tax_rules_filter( $rules ) {
 		$newrules = array();
 		foreach ( $rules as $k => $v ) {
-			$newrules[str_replace( 'index.php/index.php', 'index.php', $k )] = $v;
+			$newrules[wp_hotfix_310_pathinfo_custom_tax_rules_replace($k)] = $v;
 		}
+		// var_dump( $newrules );die();
 		return $newrules;
 	}
 
-	function wp_hotfix_310_pathinfo_custom_tax_rules_link( $link ) {
-		return str_replace( 'index.php/index.php', 'index.php', $link );
+	function wp_hotfix_310_pathinfo_custom_tax_rules_replace( $string ) {
+		global $wp_rewrite;
+		return str_replace( substr( $wp_rewrite->front, 1 ) . $wp_rewrite->root, $wp_rewrite->root, $string );
 	}
 
 	function wp_hotfix_310_pathinfo_custom_tax_rules_upgrade() {
