@@ -28,9 +28,20 @@ function wp_hotfix_init() {
 	foreach ( (array) $hotfixes as $hotfix ) {
 		call_user_func( 'wp_hotfix_' . $hotfix );
 	}
+
+	register_deactivation_hook( __FILE__, 'wp_hotfix_deactivate' );
+	register_uninstall_hook( __FILE__, 'wp_hotfix_uninstall' );
 }
 
 add_action( 'init', 'wp_hotfix_init' );
+
+function wp_hotfix_deactivate() {
+	delete_option( 'hotfix_version' );
+}
+
+function wp_hotfix_uninstall() {
+	wp_hotfix_deactivate(); // The same, for now
+}
 
 /* And now, the hotfixes */
 
@@ -61,13 +72,13 @@ function wp_hotfix_310_pathinfo_custom_tax_rules() {
 		foreach ( $rules as $k => $v ) {
 			$newrules[wp_hotfix_310_pathinfo_custom_tax_rules_replace($k)] = $v;
 		}
-		// var_dump( $newrules );die();
 		return $newrules;
 	}
 
 	function wp_hotfix_310_pathinfo_custom_tax_rules_replace( $string ) {
 		global $wp_rewrite;
-		return str_replace( substr( $wp_rewrite->front, 1 ) . $wp_rewrite->root, $wp_rewrite->root, $string );
+		$front = substr( $wp_rewrite->front, 1 );
+		return str_replace( $front . $wp_rewrite->root, $front, $string );
 	}
 
 	function wp_hotfix_310_pathinfo_custom_tax_rules_upgrade() {
