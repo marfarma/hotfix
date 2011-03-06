@@ -7,12 +7,31 @@ Author: Mark Jaquith
 Author URI: http://coveredwebservices.com/
 */
 
+// This bootstraps everything
+WP_Hotfix_Controller::init();
+
+class WP_Hotfix_Controller {
+	function init() {
+		add_action( 'init', 'wp_hotfix_init' );
+		register_activation_hook(   __FILE__, array( __CLASS__, 'activate'   ) );
+		register_deactivation_hook( __FILE__, array( __CLASS__, 'deactivate' ) );
+	}
+	function activate() {
+		add_option( 'hotfix_version', '1' );
+		register_uninstall_hook( __FILE__, array( __CLASS__, 'uninstall' ) );
+	}
+	function deactivate() {
+		delete_option( 'hotfix_version' );
+	}
+	function uninstall() {
+		self::deactivate(); // The same, for now
+	}
+}
+
 function wp_hotfix_init() {
 	global $wp_version;
 
 	$hotfixes = array();
-
-	add_option( 'hotfix_version', '1' );
 
 	switch ( $wp_version ) {
 		case '3.1' :
@@ -28,19 +47,6 @@ function wp_hotfix_init() {
 	foreach ( (array) $hotfixes as $hotfix ) {
 		call_user_func( 'wp_hotfix_' . $hotfix );
 	}
-
-	register_deactivation_hook( __FILE__, 'wp_hotfix_deactivate' );
-	register_uninstall_hook( __FILE__, 'wp_hotfix_uninstall' );
-}
-
-add_action( 'init', 'wp_hotfix_init' );
-
-function wp_hotfix_deactivate() {
-	delete_option( 'hotfix_version' );
-}
-
-function wp_hotfix_uninstall() {
-	wp_hotfix_deactivate(); // The same, for now
 }
 
 /* And now, the hotfixes */
