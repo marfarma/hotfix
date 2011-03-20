@@ -15,7 +15,6 @@ Recent fixes:
 
 * **WordPress 3.1**
 	* Fix a bug that caused some taxonomy query manipulations (like excluding categories) to not work like they did before.
-	* Fix a bug that breaks custom taxonomy query URLs when using `/index.php/` permalinks.
 
 * **WordPress 3.0.5**
 	* Prevent KSES from overzealously stripping images and other advanced HTML from Administrator/Editor comments on display.
@@ -35,9 +34,6 @@ Fixes are specific to your version of WordPress. It may be that your version of 
 Read the "Complete Hotfix List" section in the description. A later version of the plugin may list the hotfixes in a special WordPress admin page.
 
 == Changelog ==
-= 0.5 =
-* Fix a bug that breaks custom taxonomy query URLs when using `/index.php/` permalinks.
-
 = 0.4 =
 * Fix a bug in WP 3.1 that caused some taxonomy query manipulations (like excluding categories) to not work like they did before.
 
@@ -53,8 +49,6 @@ Read the "Complete Hotfix List" section in the description. A later version of t
 * Hotfix for WP 3.0.5 comment text KSES overzealousness.
 
 == Upgrade Notice ==
-= 0.5 =
-Upgrade if you're running WordPress 3.1, to fix a bug with taxonomy query manipulations and a bug with `/index.php/` custom taxonmy permalinks.
 
 = 0.4 =
 Upgrade if you're running WordPress 3.1 to fix a bug with taxonomy query manipulations.
@@ -69,7 +63,6 @@ Allows you to see safe HTML in the admin.
 
 * **WordPress 3.1**
 	* Fix a bug that caused some taxonomy query manipulations (like excluding categories) to not work like they did before.
-	* Fix a bug that breaks custom taxonomy query URLs when using `/index.php/` permalinks.
 
 * **WordPress 3.0.5**
 	* Prevent KSES from overzealously stripping images and other advanced HTML from Administrator/Editor comments on display.
