@@ -2,8 +2,8 @@
 Contributors: markjaquith
 Tags: hotfix, bugs, wordpress, update
 Requires at least: 3.0
-Tested up to: 3.1
-Stable tag: 0.4
+Tested up to: 3.1.3
+Stable tag: 0.5
 
 Provides unofficial fixes for selected WordPress bugs, so you don't have to wait for the next WordPress core release.
 
