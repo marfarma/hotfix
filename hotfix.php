@@ -2,7 +2,7 @@
 /*
 Plugin Name: Hotfix
 Description: Provides "hotfixes" for selected WordPress bugs, so you don't have to wait for the next WordPress core release. Keep the plugin updated!
-Version: 0.5-beta
+Version: 0.5
 Author: Mark Jaquith
 Author URI: http://coveredwebservices.com/
 */
