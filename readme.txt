@@ -13,6 +13,9 @@ This unofficial plugin provides fixes for selected WordPress bugs, so you don't 
 
 Recent fixes:
 
+* **WordPress 3.1.3**
+	* Fix a bug that caused `post_status` to malfunction if passed an array
+
 * **WordPress 3.1**
 	* Fix a bug that caused some taxonomy query manipulations (like excluding categories) to not work like they did before.
 
@@ -34,6 +37,10 @@ Fixes are specific to your version of WordPress. It may be that your version of 
 Read the "Complete Hotfix List" section in the description. A later version of the plugin may list the hotfixes in a special WordPress admin page.
 
 == Changelog ==
+= 0.5 =
+* Upgrade procedures (not currently used)
+* Fixes a bug in WP 3.1.3 related to post_status array values
+
 = 0.4 =
 * Fix a bug in WP 3.1 that caused some taxonomy query manipulations (like excluding categories) to not work like they did before.
 
@@ -49,6 +56,8 @@ Read the "Complete Hotfix List" section in the description. A later version of t
 * Hotfix for WP 3.0.5 comment text KSES overzealousness.
 
 == Upgrade Notice ==
+= 0.5 =
+Upgrade if you're having issues with WordPress 3.1.3.
 
 = 0.4 =
 Upgrade if you're running WordPress 3.1 to fix a bug with taxonomy query manipulations.
@@ -60,6 +69,9 @@ If you're not running WordPress 3.0.5 and you're getting a "Line 19" error, this
 Allows you to see safe HTML in the admin.
 
 == Complete Hotfix List ==
+
+* **WordPress 3.1.3**
+	* Fix a bug that caused `post_status` to malfunction if passed an array
 
 * **WordPress 3.1**
 	* Fix a bug that caused some taxonomy query manipulations (like excluding categories) to not work like they did before.

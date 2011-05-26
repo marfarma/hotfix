@@ -34,6 +34,9 @@ function wp_hotfix_init() {
 	$hotfixes = array();
 
 	switch ( $wp_version ) {
+		case '3.1.3' :
+			$hotfixes = array( '313_post_status_query_string' );
+			break;
 		case '3.1' :
 			$hotfixes = array( '310_parsed_tax_query' );
 			break;
@@ -64,4 +67,14 @@ function wp_hotfix_310_parsed_tax_query() {
 	function wp_hotfix_310_parsed_tax_query_pre_get_posts( $q ) {
 		@$q->parsed_tax_query = false; // Force it to be re-parsed.
 		return $q;
+	}
+
+function wp_hotfix_313_post_status_query_string() {
+	add_filter( 'request', 'wp_hotfix_313_post_status_query_string_request' );
+}
+
+	function wp_hotfix_313_post_status_query_string_request( $qvs ) {
+		if ( isset( $qvs['post_status'] ) && is_array( $qvs['post_status'] ) )
+			$qvs['post_status'] = implode( ',', $qvs['post_status'] );
+		return $qvs;
 	}
