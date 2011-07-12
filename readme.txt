@@ -12,6 +12,7 @@ Provides unofficial fixes for selected WordPress bugs, so you don't have to wait
 This unofficial plugin provides fixes for selected WordPress bugs, so you don't have to wait for the next WordPress core release. **This does not mean you can stop updating WordPress!** It just means that you'll get a few selected fixes more quickly.
 
 Recent fixes:
+
 * **WordPress 3.2**
 	* Include JSON support for people with funky PHP setups
 
