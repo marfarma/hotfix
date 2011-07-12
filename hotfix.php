@@ -97,7 +97,7 @@ if ( ! function_exists( 'json_decode' ) && ! function_exists( '_json_decode_obje
 		global $wp_hotfix_json;
 
 		if ( ! is_a( $wp_hotfix_json, 'Services_JSON' ) ) {
-			require_once( dirname( __FILE__ ) . '/inc/class-json.php' ) );
+			require_once( dirname( __FILE__ ) . '/inc/class-json.php' );
 			$wp_hotfix_json = new Services_JSON();
 		}
 

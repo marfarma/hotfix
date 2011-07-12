@@ -40,6 +40,9 @@ Fixes are specific to your version of WordPress. It may be that your version of 
 Read the "Complete Hotfix List" section in the description. A later version of the plugin may list the hotfixes in a special WordPress admin page.
 
 == Changelog ==
+= 0.7 =
+* Fix issue in version 0.6
+
 = 0.6 =
 * Include JSON support for people with funky PHP setups.
 
@@ -62,7 +65,7 @@ Read the "Complete Hotfix List" section in the description. A later version of t
 * Hotfix for WP 3.0.5 comment text KSES overzealousness.
 
 == Upgrade Notice ==
-= 0.6 =
+= 0.7 =
 Upgrade if you're getting JSON-related errors.
 
 = 0.5 =
