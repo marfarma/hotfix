@@ -1,8 +1,8 @@
 === Hotfix ===
-Contributors: markjaquith
+Contributors: markjaquith, nacin
 Tags: hotfix, bugs, wordpress, update
 Requires at least: 3.0
-Tested up to: 3.2.1
+Tested up to: 3.3
 Stable tag: 0.7
 
 Provides unofficial fixes for selected WordPress bugs, so you don't have to wait for the next WordPress core release.
@@ -12,18 +12,11 @@ Provides unofficial fixes for selected WordPress bugs, so you don't have to wait
 This unofficial plugin provides fixes for selected WordPress bugs, so you don't have to wait for the next WordPress core release. **This does not mean you can stop updating WordPress!** It just means that you'll get a few selected fixes more quickly.
 
 Recent fixes:
+* **WordPress 3.3**
+	* Work around a bug for people without built-in JSON support
 
 * **WordPress 3.2**
 	* Include JSON support for people with funky PHP setups
-
-* **WordPress 3.1.3**
-	* Fix a bug that caused `post_status` to malfunction if passed an array
-
-* **WordPress 3.1**
-	* Fix a bug that caused some taxonomy query manipulations (like excluding categories) to not work like they did before.
-
-* **WordPress 3.0.5**
-	* Prevent KSES from overzealously stripping images and other advanced HTML from Administrator/Editor comments on display.
 
 Fixes are specific to your version of WordPress. It may be that your version of WordPress has no fixes. That's fine. Keep the plugin activated and updated, in case you need it for a subsequent version of WordPress!
 
@@ -40,6 +33,8 @@ Fixes are specific to your version of WordPress. It may be that your version of 
 Read the "Complete Hotfix List" section in the description. A later version of the plugin may list the hotfixes in a special WordPress admin page.
 
 == Changelog ==
+= 0.8 =
+* Include JSON support for load-scripts.php
 = 0.7 =
 * Fix issue in version 0.6
 
@@ -65,6 +60,9 @@ Read the "Complete Hotfix List" section in the description. A later version of t
 * Hotfix for WP 3.0.5 comment text KSES overzealousness.
 
 == Upgrade Notice ==
+= 0.8 =
+Upgrade if you are having JavaScript issues in the WordPress Dashboard.
+
 = 0.7 =
 Upgrade if you're getting JSON-related errors.
 
@@ -81,6 +79,9 @@ If you're not running WordPress 3.0.5 and you're getting a "Line 19" error, this
 Allows you to see safe HTML in the admin.
 
 == Complete Hotfix List ==
+
+* **WordPress 3.3**
+	* Work around a bug for people without built-in JSON support
 
 * **WordPress 3.2**
 	* Include JSON support for people with funky PHP setups

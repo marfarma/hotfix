@@ -2,7 +2,7 @@
 /*
 Plugin Name: Hotfix
 Description: Provides "hotfixes" for selected WordPress bugs, so you don't have to wait for the next WordPress core release. Keep the plugin updated!
-Version: 0.6
+Version: 0.8
 Author: Mark Jaquith
 Author URI: http://coveredwebservices.com/
 */
@@ -34,6 +34,11 @@ function wp_hotfix_init() {
 	$hotfixes = array();
 
 	switch ( $wp_version ) {
+		case '3.3' :
+			$hotfixes = array( '33_no_wp_print_styles_in_admin' );
+			if ( !defined( 'CONCATENATE_SCRIPTS' ) )
+				define( 'CONCATENATE_SCRIPTS', false );
+			break;
 		case '3.1.3' :
 			$hotfixes = array( '313_post_status_query_string' );
 			break;
@@ -111,4 +116,12 @@ if ( ! function_exists( 'json_decode' ) && ! function_exists( '_json_decode_obje
 			$data = get_object_vars($data);
 		return is_array($data) ? array_map(__FUNCTION__, $data) : $data;
 	}
+}
+
+function wp_hotfix_33_no_wp_print_styles_in_admin() {
+	add_action( 'in_admin_header', 'wp_hotfix_33_no_wp_print_styles_in_admin_remove', 999 );
+}
+
+function wp_hotfix_33_no_wp_print_styles_in_admin_remove() {
+	remove_all_actions( 'wp_print_styles' );
 }
