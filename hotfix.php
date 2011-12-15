@@ -35,9 +35,7 @@ function wp_hotfix_init() {
 
 	switch ( $wp_version ) {
 		case '3.3' :
-			$hotfixes = array( '33_no_wp_print_styles_in_admin' );
-			if ( !defined( 'CONCATENATE_SCRIPTS' ) )
-				define( 'CONCATENATE_SCRIPTS', false );
+			$hotfixes = array( '330_no_wp_print_styles_in_admin', '330_no_json_encode_load_scripts' );
 			break;
 		case '3.1.3' :
 			$hotfixes = array( '313_post_status_query_string' );
@@ -118,10 +116,19 @@ if ( ! function_exists( 'json_decode' ) && ! function_exists( '_json_decode_obje
 	}
 }
 
-function wp_hotfix_33_no_wp_print_styles_in_admin() {
-	add_action( 'in_admin_header', 'wp_hotfix_33_no_wp_print_styles_in_admin_remove', 999 );
+function wp_hotfix_330_no_wp_print_styles_in_admin() {
+	add_action( 'in_admin_header', 'wp_hotfix_330_no_wp_print_styles_in_admin_remove', 999 );
 }
 
-function wp_hotfix_33_no_wp_print_styles_in_admin_remove() {
+function wp_hotfix_330_no_wp_print_styles_in_admin_remove() {
 	remove_all_actions( 'wp_print_styles' );
+}
+
+function wp_hotfix_330_no_json_encode_load_scripts() {
+	$functions = get_defined_functions();
+	if ( in_array( 'json_encode', $functions['internal'] ) )
+		return;
+
+	if ( ! defined( 'CONCATENATE_SCRIPTS' ) )
+		define( 'CONCATENATE_SCRIPTS', false );
 }
