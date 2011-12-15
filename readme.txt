@@ -13,6 +13,7 @@ This unofficial plugin provides fixes for selected WordPress bugs, so you don't 
 
 Recent fixes:
 * **WordPress 3.3**
+	* Prevent plugin and theme styles from bleeding into the dashboard
 	* Work around a bug for people without built-in JSON support
 
 * **WordPress 3.2**
@@ -34,9 +35,11 @@ Read the "Complete Hotfix List" section in the description. A later version of t
 
 == Changelog ==
 = 0.8 =
-* Include JSON support for load-scripts.php
+* Prevent plugin and theme styles from bleeding into the dashboard.
+* Include JSON support for load-scripts.php.
+
 = 0.7 =
-* Fix issue in version 0.6
+* Fix issue in version 0.6.
 
 = 0.6 =
 * Include JSON support for people with funky PHP setups.
@@ -61,7 +64,7 @@ Read the "Complete Hotfix List" section in the description. A later version of t
 
 == Upgrade Notice ==
 = 0.8 =
-Upgrade if you are having JavaScript issues in the WordPress Dashboard.
+Upgrade if you are having JavaScript or styling issues in the WordPress Dashboard.
 
 = 0.7 =
 Upgrade if you're getting JSON-related errors.
@@ -81,6 +84,7 @@ Allows you to see safe HTML in the admin.
 == Complete Hotfix List ==
 
 * **WordPress 3.3**
+	* Prevent plugin and theme styles from bleeding into the dashboard
 	* Work around a bug for people without built-in JSON support
 
 * **WordPress 3.2**
