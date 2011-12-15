@@ -117,7 +117,7 @@ if ( ! function_exists( 'json_decode' ) && ! function_exists( '_json_decode_obje
 }
 
 function wp_hotfix_330_no_wp_print_styles_in_admin() {
-	add_action( 'in_admin_header', 'wp_hotfix_330_no_wp_print_styles_in_admin_remove', 999 );
+	add_action( 'admin_init', 'wp_hotfix_330_no_wp_print_styles_in_admin_remove', 999 );
 }
 
 function wp_hotfix_330_no_wp_print_styles_in_admin_remove() {
