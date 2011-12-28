@@ -99,5 +99,3 @@ Allows you to see safe HTML in the admin.
 
 * **WordPress 3.0.5**
 	* Prevent KSES from overzealously stripping images and other advanced HTML from Administrator/Editor comments on display.
-
-TEST (seeing how fast our new plugin updates are)
