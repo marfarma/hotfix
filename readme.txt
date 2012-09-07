@@ -2,7 +2,7 @@
 Contributors: markjaquith, nacin
 Tags: hotfix, bugs, wordpress, update
 Requires at least: 3.0
-Tested up to: 3.3
+Tested up to: 3.4.2
 Stable tag: 0.8
 
 Provides unofficial fixes for selected WordPress bugs, so you don't have to wait for the next WordPress core release.
@@ -12,13 +12,12 @@ Provides unofficial fixes for selected WordPress bugs, so you don't have to wait
 This unofficial plugin provides fixes for selected WordPress bugs, so you don't have to wait for the next WordPress core release. **This does not mean you can stop updating WordPress!** It just means that you'll get a few selected fixes more quickly.
 
 Recent fixes:
+* **WordPress 3.4.2**
+	* Fix adding and updating Custom Fields
 
 * **WordPress 3.3**
 	* Prevent plugin and theme styles from bleeding into the dashboard
 	* Work around a bug for people without built-in JSON support
-
-* **WordPress 3.2**
-	* Include JSON support for people with funky PHP setups
 
 Fixes are specific to your version of WordPress. It may be that your version of WordPress has no fixes. That's fine. Keep the plugin activated and updated, in case you need it for a subsequent version of WordPress!
 
@@ -35,6 +34,9 @@ Fixes are specific to your version of WordPress. It may be that your version of 
 Read the "Complete Hotfix List" section in the description. A later version of the plugin may list the hotfixes in a special WordPress admin page.
 
 == Changelog ==
+= 0.9 =
+* Fix adding and updating Custom Fields.
+
 = 0.8 =
 * Prevent plugin and theme styles from bleeding into the dashboard.
 * Include JSON support for load-scripts.php.
