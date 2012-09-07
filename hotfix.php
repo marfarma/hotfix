@@ -34,6 +34,9 @@ function wp_hotfix_init() {
 	$hotfixes = array();
 
 	switch ( $wp_version ) {
+		case '3.4.2' :
+			$hotfixes = array( '342_custom_fields' );
+			break;
 		case '3.3' :
 			$hotfixes = array( '330_no_wp_print_styles_in_admin', '330_no_json_encode_load_scripts' );
 			break;
@@ -131,4 +134,20 @@ function wp_hotfix_330_no_json_encode_load_scripts() {
 
 	if ( ! defined( 'CONCATENATE_SCRIPTS' ) )
 		define( 'CONCATENATE_SCRIPTS', false );
+}
+
+function wp_hotfix_342_custom_fields() {
+	add_action( 'admin_footer-post.php',     'wp_hotfix_342_custom_fields_action' );
+	add_action( 'admin_footer-post-new.php', 'wp_hotfix_342_custom_fields_action' );
+}
+
+function wp_hotfix_342_custom_fields_action() {
+	?><script>
+	jQuery(document).ready( function($) {
+		$('#postcustomstuff').on('hover focus', '#addmetasub, #updatemeta', function() {
+			$(this).attr('id', 'meta-add-submit');
+		});
+	});
+	</script>
+	<?php
 }
