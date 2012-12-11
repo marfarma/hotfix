@@ -3,7 +3,7 @@ Contributors: markjaquith, nacin
 Tags: hotfix, bugs, wordpress, update
 Requires at least: 3.0
 Tested up to: 3.4.2
-Stable tag: 0.8
+Stable tag: 0.9
 
 Provides unofficial fixes for selected WordPress bugs, so you don't have to wait for the next WordPress core release.
 
@@ -12,6 +12,7 @@ Provides unofficial fixes for selected WordPress bugs, so you don't have to wait
 This unofficial plugin provides fixes for selected WordPress bugs, so you don't have to wait for the next WordPress core release. **This does not mean you can stop updating WordPress!** It just means that you'll get a few selected fixes more quickly.
 
 Recent fixes:
+
 * **WordPress 3.4.2**
 	* Fix adding and updating Custom Fields
 
@@ -66,6 +67,9 @@ Read the "Complete Hotfix List" section in the description. A later version of t
 * Hotfix for WP 3.0.5 comment text KSES overzealousness.
 
 == Upgrade Notice ==
+= 0.9 =
+Upgrade if you are having trouble with Custom Fields with WordPress 3.4.2.
+
 = 0.8 =
 Upgrade if you are having JavaScript or styling issues in the WordPress Dashboard.
 
@@ -85,6 +89,8 @@ If you're not running WordPress 3.0.5 and you're getting a "Line 19" error, this
 Allows you to see safe HTML in the admin.
 
 == Complete Hotfix List ==
+* **WordPress 3.4.2**
+	* Fix adding and updating Custom Fields
 
 * **WordPress 3.3**
 	* Prevent plugin and theme styles from bleeding into the dashboard

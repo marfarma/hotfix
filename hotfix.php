@@ -34,6 +34,9 @@ function wp_hotfix_init() {
 	$hotfixes = array();
 
 	switch ( $wp_version ) {
+		case '3.5' :
+			$hotfixes = array( '350_twentytwelve' );
+			break;
 		case '3.4.2' :
 			$hotfixes = array( '342_custom_fields' );
 			break;
@@ -151,3 +154,35 @@ function wp_hotfix_342_custom_fields_action() {
 	</script>
 	<?php
 }
+
+function wp_hotfix_350_twentytwelve() {
+	add_action( 'pre_http_request', 'wp_hotfix_350_twentytwelve_pre_http_request', 10, 3 );
+}
+
+function wp_hotfix_350_twentytwelve_pre_http_request( $return, $args, $url ) {
+	if ( $url != 'http://api.wordpress.org/themes/update-check/1.0/' )
+		return $return;
+
+	if ( ! empty( $args['_twentytwelve_hijack'] ) )
+		return $return;
+
+	$theme = wp_get_theme('twentytwelve');
+	if ( ! $theme->exists() || ! $theme->errors() )
+		return $return;
+
+	$args['_twentytwelve_hijack'] = true;
+
+	$themes = unserialize( $args['body']['themes'] );
+	$themes['twentytwelve'] = array(
+		'Name'       => 'Twenty Twelve',
+		'Title'      => 'Twenty Twelve',
+		'Version'    => '1.1',
+		'Author'     => 'the WordPress team',
+		'Author URI' => 'http://wordpress.org/',
+		'Template'   => 'twentytwelve',
+		'Stylesheet' => 'twentytwelve',
+	);
+	$args['body']['themes'] = serialize( $themes );
+	return wp_remote_post( $url, $args );
+}
+
