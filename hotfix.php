@@ -176,7 +176,7 @@ function wp_hotfix_350_twentytwelve_pre_http_request( $return, $args, $url ) {
 	$themes['twentytwelve'] = array(
 		'Name'       => 'Twenty Twelve',
 		'Title'      => 'Twenty Twelve',
-		'Version'    => '1.1',
+		'Version'    => '1.0',
 		'Author'     => 'the WordPress team',
 		'Author URI' => 'http://wordpress.org/',
 		'Template'   => 'twentytwelve',
